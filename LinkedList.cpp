@@ -28,6 +28,10 @@ void List::AddNode(int addData){
 	}
 }
 
+void InsertNode(int addData, int pos){
+	
+}
+
 void List::DeleteNode(int delData){
 	nodePtr delPtr = NULL;
 	temp = head;
