@@ -17,5 +17,7 @@ class List{
 		void AddNode(int addData);
 		void DeleteNode(int delData);
 		void Reverser();
+		void InsertNode(int addData, int pos);
+		int SizeOfList();
 		void PrintList();
 };
