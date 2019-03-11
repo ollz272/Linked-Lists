@@ -1,5 +1,5 @@
 #include <cstdlib>
-#include "list.h"
+#include "LinkedList.h"
 
 int main(){
 
