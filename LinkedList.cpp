@@ -28,7 +28,7 @@ void List::AddNode(int addData){
 	}
 }
 
-void InsertNode(int insertData, int pos){
+void List::InsertNode(int insertData, int pos){
 	if( pos > SizeOfList())
 	{
 		cout << "There aren't that  many nodes in the list, dummy.\n"
