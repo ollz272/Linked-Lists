@@ -1,23 +1,23 @@
 
 class List{
 	private: //data
-		
+
 		typedef struct node{
 			int data; //Creates data stored within the node
 			node* next; //this is a pointer to the next node within the list.
 		}* nodePtr; //nodePtr now means node*.
-		
+
 		nodePtr head;
 		nodePtr current;
 		nodePtr temp;
-		notePtr tail;
-		
+		nodePtr tail;
+
 	public: //functions to manipulate data
-		list(); //constructor
+		List(); //constructor
 		void AddNode(int addData);
 		void DeleteNode(int delData);
-		void Reverser();
+		//void Reverser();
 		void InsertNode(int addData, int pos);
 		int SizeOfList();
 		void PrintList();
-};
+}; // all okay

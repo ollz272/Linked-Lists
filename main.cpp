@@ -1,13 +1,14 @@
 #include <cstdlib>
-#include "list.h"
+#include "LinkedList.h"
+#include "LinkedList.cpp"
 
 int main(){
 
   List Numbers;
-  
+
   Numbers.AddNode(1);
   Numbers.AddNode(2);
   Numbers.AddNode(3);
-  
-  Numbers.PrintList;
+
+  Numbers.PrintList();
 }
