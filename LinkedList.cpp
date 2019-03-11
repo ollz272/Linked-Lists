@@ -42,16 +42,32 @@ void List::InsertNode(int insertData, int pos){
 	while( i < pos){
 		temp = current;
 		current = current-> next;
+		i++;
 	}
-	temp->next = n;
-	n->next = current;
+  // ============== CONDITIONAL STATMENTS ===============
+	if(current == head){
+		n -> next = head;
+		head = n;
+	}
+	else{
+		if(current == NULL){
+		cout << current << " = " << NULL << endl;
+		temp->next= n;
+			}
+		else{
+			cout << "so it must be you.." << endl;
+			temp->next = n;
+			n->next = current;
+		}
+	}
+	//TIDY THIS UP. NESTED IF STATEMENTS LOOK JANKY. 
+	// ============== CONDITIONAL STATMENTS ===============
 }
 
 void List::DeleteNode(int delData){
 	nodePtr delPtr = NULL;
 	temp = head;
 	current = head;
-
 	while(current !=NULL && current -> data != delData){
 		temp = current;
 		current = current ->next;
@@ -63,7 +79,7 @@ void List::DeleteNode(int delData){
 		delPtr ==current;
 		current = current-> next;
 		temp -> next = current;
-		if(delPtr == head){
+		if(delPtr == head){ //this if statement isn't working correctly.
 			head = head -> next;
 			temp = NULL;
 		}
