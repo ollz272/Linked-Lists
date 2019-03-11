@@ -57,4 +57,13 @@ void List::PrintList(){
 	}
 }
 
+void List::Reverser(){
+	while(current != NULL){
+		next = current->next;
+		current-> = prev;
+		prev = current;
+		current = next;
+	}
+	head = prev;
+}
 
