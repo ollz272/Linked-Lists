@@ -1,7 +1,7 @@
 // Example program
 #include <iostream>
 #include <cstdlib>
-#include "Linked List.h"
+#include "LinkedList.h"
 using namespace std;
 
 List::List(){
