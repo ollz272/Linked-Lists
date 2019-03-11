@@ -28,9 +28,26 @@ void List::AddNode(int addData){
 	}
 }
 
-void InsertNode(int addData, int pos){
-	
+void InsertNode(int insertData, int pos){
+	if( pos > SizeOfList())
+	{
+		cout << "There aren't that  many nodes in the list, dummy.\n"
+		return.
+	}
+	nodePtr n =  new node;
+	n-> next = NULL;
+	n-> data = insertData;
+	int i = 0;
+	temp = head;
+	current = head;
+	while( i < pos){
+		temp = current;
+		current = current-> next;
+	}	
+	temp->next = n;
+	n->next = current;
 }
+
 
 void List::DeleteNode(int delData){
 	nodePtr delPtr = NULL;
