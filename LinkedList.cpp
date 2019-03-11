@@ -61,6 +61,16 @@ void List::PrintList(){
 	}
 }
 
+int List::SizeOfList(){
+	int size = 0;
+	current = head
+	while(current != Null){
+		current = current -> next;
+		size++;
+	}
+	return size;
+}
+
 void List::Reverser(){
 	while(current != NULL){
 		next = current->next;
