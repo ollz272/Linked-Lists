@@ -8,6 +8,7 @@ List::List(){
 	current = NULL;
 	temp = NULL;
 	tail = NULL;
+	forward = NULL;
 }
 
 void List::AddNode(int addData){
@@ -51,7 +52,6 @@ void List::InsertNode(int insertData, int pos){
 	}
 	else{
 		if(current == NULL){
-		cout << current << " = " << NULL << endl;
 		temp->next= n;
 			}
 		else{
@@ -60,7 +60,7 @@ void List::InsertNode(int insertData, int pos){
 			n->next = current;
 		}
 	}
-	//TIDY THIS UP. NESTED IF STATEMENTS LOOK JANKY. 
+	//TIDY THIS UP. NESTED IF STATEMENTS LOOK JANKY.
 	// ============== CONDITIONAL STATMENTS ===============
 }
 
@@ -106,12 +106,14 @@ int List::SizeOfList(){
 	return size;
 }
 
-/*void List::Reverser(){
+void List::Reverser(){
+	current = head;
+	temp = NULL;
 	while(current != NULL){
-		next = current->next;
-		current-> = prev;
-		prev = current;
-		current = next;
+		forward = current->next;
+		current-> next = temp;
+		temp = current;
+		current = forward;
 	}
-	head = prev;
-}*/
+	head = temp;
+}

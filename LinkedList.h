@@ -10,6 +10,7 @@ class List{
 		nodePtr head;
 		nodePtr current;
 		nodePtr temp;
+		nodePtr forward;
 		nodePtr tail;
 
 	public: //functions to manipulate data
@@ -20,4 +21,5 @@ class List{
 		void InsertNode(int addData, int pos);
 		int SizeOfList();
 		void PrintList();
+		void Reverser();
 }; // all okay

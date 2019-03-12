@@ -6,14 +6,16 @@ int main(){
 
   List Numbers;
 
-  Numbers.AddNode(1);
-  Numbers.AddNode(2);
-  Numbers.AddNode(3);
-  Numbers.AddNode(7);
+
+  for(int i = 1; i <= 100; i++){
+    Numbers.AddNode(i);
+  }
+
 
   Numbers.PrintList();
-  cout << " " << endl;
-  Numbers.InsertNode(100, 0);
+
+  Numbers.Reverser();
 
   Numbers.PrintList();
+
 }
