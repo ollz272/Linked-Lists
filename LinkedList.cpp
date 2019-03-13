@@ -51,8 +51,7 @@ void List::InsertNode(int insertData, int pos){
 		n -> next = head;
 		head = n;
 	}
-	else{
-		if(current == NULL){
+	else if(current == NULL){
 		temp->next= n;
 			}
 		else{
