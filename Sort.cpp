@@ -1,4 +1,5 @@
 void List::BubbleSort(){
+  current = head;
   while( current != NULL){
     temp = current - > next;
     while(temp!= NULL){
