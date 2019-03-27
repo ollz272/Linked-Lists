@@ -8,9 +8,9 @@ int main(){
   List Numbers;
 
 
-  for(int i = 1; i <= 100; i++){
-    Numbers.AddNode(i);
-  }
+  Numbers.AddNode(12);
+  Numbers.AddNode(13);
+  Numbers.AddNode(14);
 
 
   Numbers.PrintList();

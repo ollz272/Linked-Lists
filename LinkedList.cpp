@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cstdlib>
 
-using namespace std;
 
 List::List(){
 	head = NULL;
@@ -32,12 +31,12 @@ void List::AddNode(int addData){
 void List::InsertNode(int insertData, int pos){
 	if( pos > SizeOfList() )
 	{
-		cout << "There aren't that  many nodes in the list, dummy.\n";
+		std::cout << "There aren't that  many nodes in the list, dummy.\n";
 		return;
 	}
 	nodePtr n =  new node;
-	n-> next = NULL;
-	n-> data = insertData;
+	n -> next = NULL;
+	n -> data = insertData;
 	int i = 0;
 	temp = head;
 	current = head;
@@ -46,7 +45,7 @@ void List::InsertNode(int insertData, int pos){
 		current = current-> next;
 		i++;
 	}
-  // ============== CONDITIONAL STATMENTS ===============
+
 	if(current == head){
 		n -> next = head;
 		head = n;
@@ -54,14 +53,12 @@ void List::InsertNode(int insertData, int pos){
 	else if(current == NULL){
 		temp->next= n;
 			}
-		else{
-			cout << "so it must be you.." << endl;
-			temp->next = n;
-			n->next = current;
+	else{
+			temp -> next = n;
+			n -> next = current;
 		}
 	}
-	//TIDY THIS UP. NESTED IF STATEMENTS LOOK JANKY.
-	// ============== CONDITIONAL STATMENTS ===============
+
 }
 
 void List::DeleteNode(int delData){
@@ -73,7 +70,7 @@ void List::DeleteNode(int delData){
 		current = current ->next;
 	}
 	if(current == NULL){
-		cout << delData << " was not in the list\n";
+		std::cout << delData << " was not in the list\n";
 	}
 	else{
 		delPtr ==current;
@@ -84,7 +81,7 @@ void List::DeleteNode(int delData){
 			temp = NULL;
 		}
 		delete delPtr;
-		cout << "The value " << delData << " was deleted\n";
+		std::cout << "The value " << delData << " was deleted\n";
 	}
 }
 
@@ -116,4 +113,5 @@ void List::Reverser(){
 		current = forward;
 	}
 	head = temp;
+
 }
