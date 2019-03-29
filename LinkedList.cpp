@@ -21,13 +21,13 @@ void List::AddNode(int addData){
 	n-> next = NULL;
 	//We set its data to whatever we addData is.
 	n-> data = addData;
-	
+
 	if(head != NULL){ //This statement here covers the case that we already have objects in our linked list.
 		current = head; //We want to start at the head.
-		while(current->next !=NULL){ //Until we reach the end of the linked list
+		while(current -> next != NULL){ //Until we reach the end of the linked list
 			current = current -> next; //Make the current pointer move to the next node.
 		}
-		current-> next = n; // We are now at the end. Let the current penultimate pointer point to our new node. 
+		current-> next = n; // We are now at the end. Let the current penultimate pointer point to our new node.
 	}
 	else{
 		head = n;
@@ -40,19 +40,19 @@ void List::DeleteNode(int delData){
 	nodePtr delPtr = NULL;
 	temp = head;
 	curr = head;
-	
+
 	//The first condition ensures the while loop will stop when it reaches the tail of the list. The second condition ensures that we will stop on the node that contains delData.
 	while(curr !=NULL && curr -> data != delData){//This just moves current and temp so that current is always one ahead of temp.
 		temp = curr;
-		curr = curr ->next;
+		curr = curr -> next;
 	}
 	if(curr == NULL){//to deal with the case that the data wasn't there.
 		cout << delData << " was not in the list\n";
 	}
 	else{//Deal with the case that we find the data (ie the good part).
-	
-		delPtr ==curr; // have the delete pointer point to the object that needs to be deleted.
-		curr = curr-> next; //move the current node to the one after the node in need of deletion.
+
+		delPtr == curr; // have the delete pointer point to the object that needs to be deleted.
+		curr = curr -> next; //move the current node to the one after the node in need of deletion.
 		temp -> next = curr; //for the node before the one that needs to be deleted, have its pointer point to the one in front of the node thats being deleted.
 		if(delPtr == head){//the only special case is when the node being deleted is the head.
 			head = head -> next; //move the head to be the one after the node being deleted.
@@ -65,12 +65,10 @@ void List::DeleteNode(int delData){
 
 void List::Reverser(){
 	while(current != NULL){
-		next = current->next;
-		current-> = prev;
+		next = current -> next;
+		current -> = prev;
 		prev = current;
 		current = next;
 	}
 	head = prev;
 }
-
-
